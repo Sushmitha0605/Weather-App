@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <h2>Weather App</h2>
+        <p>Real-time weather with smart search</p>
+      </div>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Search city..."
+          autocomplete="off"
+          oninput="searchCities()"
+        />
+        <button onclick="getWeather()">Search</button>
+        <div class="suggestions" id="suggestions"></div>
+      </div>
+    </div>
+
+    <!-- Main Weather Card -->
+    <div class="weather-card">
+      <div class="left">
+        <h1 id="location">--</h1>
+
+        <div class="temp">
+          <span id="temperature">--</span>°C
+          <span id="emoji">🌍</span>
+        </div>
+
+        <p id="condition">--</p>
+
+        <div class="details">
+          <p>Humidity: <span id="humidity">--</span>%</p>
+          <p>Wind: <span id="wind">--</span> m/s</p>
+          <p>Sunrise: <span id="sunrise">--</span></p>
+          <p>Sunset: <span id="sunset">--</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hourly Forecast -->
+    <h3 class="section-title">Today</h3>
+    <div class="hourly-forecast" id="hourlyForecast"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
